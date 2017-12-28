@@ -41,9 +41,12 @@ class ProcessParams
 			{
 				foreach($students as $student)
 				{
-					if ($colleges = fetchData(array('table'=>'colleges','condition'=>' WHERE College_ID = "'.$student['College_ID'].'"')))
+					if ($colleges = fetchSingleColumnData(array('table'=>'colleges','condition'=>' WHERE College_ID = "'.$student['College_ID'].'"'),'College_Name'))
 					{
-						$college = $colleges;
+						foreach($colleges as $clg)
+						{
+							$college = $clg['College_Name'];							
+						}
 					}
 
 					$p_skill = str_split($student['Personal_Skills']);
@@ -62,6 +65,10 @@ class ProcessParams
 									array_push($p_skills, $personal_skill['Skill_Name']);
 								}
 							}
+							else
+							{
+								$p_skills = array("No skills found");
+							}
 						}
 					}
 
@@ -76,6 +83,10 @@ class ProcessParams
 								{
 									array_push($t_skills, $technical_skill['Skill_Name']);
 								}
+							}
+							else
+							{
+								$t_skills = array("No skills found");
 							}
 						}
 					}
@@ -724,23 +735,17 @@ class ProcessParams
 		}
 	}
 
-	function getPersonalSkills($data)
+	function getPersonalSkills()
 	{
 		if($personal_skills = fetchData(array('table'=>'personal_skills','condition','')))
 		{
-			$response['success']  = 1;
-			$response = array('success'=>1,'personal_skills'=>$personal_skills);
-			echo json_encode($response);
+			return $personal_skills;
 		}
 		else
 		{
-			$response['success'] = 0;
-			$response['message'] = "No Records Found";
-
-			echo json_encode($response);	
+			return false;
 		}
 	}
-
 
 	function getPersonalSkillsFilter()
 	{
@@ -759,20 +764,16 @@ class ProcessParams
 		}
 	}
 
-	function getTechnicalSkills($data)
+
+function getTechnicalSkills()
 	{
 		if($technical_skills = fetchData(array('table'=>'technical_skills','condition','')))
 		{
-			$response['success']  = 1;
-			$response = array('success'=>1,'technical_skills'=>$technical_skills);
-			echo json_encode($response);
+			return $technical_skills;
 		}
 		else
 		{
-			$response['success'] = 0;
-			$response['message'] = "No Records Found";
-
-			echo json_encode($response);	
+			return false;
 		}
 	}
 
@@ -792,6 +793,39 @@ class ProcessParams
 			echo json_encode($response);	
 		}
 	}
+
+
+	function getSkills()
+	{
+		$personalSkills = $this->getPersonalSkills();
+		$technicalSkills = $this->getTechnicalSkills();
+
+		if($personalSkills)
+		{
+			if($technicalSkills)
+			{
+				$response = array('success'=>1, 'personal_skills'=>$personalSkills, 'technical_skills'=>$technicalSkills);
+			}
+			else
+			{
+				$response = array('success'=>1, 'personal_skills'=>$personalSkills, 'technical_skills'=>'No skills added yet');	
+			}
+		}
+		else
+		{
+			if($technicalSkills)
+			{
+				$response = array('success'=>1, 'personal_skills'=>'No skills added yet', 'technical_skills'=>$technicalSkills);
+			}
+			else
+			{
+				$response = array('success'=>0, 'personal_skills'=>'No skills added yet', 'technical_skills'=>'No skills added yet');	
+			}
+		}
+
+		echo json_encode($response);
+	}
+	
 
 	function getThreadMessaegs($data)
 	{
@@ -853,7 +887,7 @@ class ProcessParams
 		}*/
 
 		$sql = "UPDATE students SET Name_of_the_Student= :name, Email = :email, Gender=:gender, Contact_Number=:contact_number,
-		Strengths = :strengths, Weaknesses = :weaknesses, Acheivements =:achievements, Technical_Skills = :technical_skills, Personal_Skills = :personal_skills WHERE Username =:username;";
+		Strengths = :strengths, Weaknesses = :weaknesses, Acheivements =:achievements WHERE Username =:username;";
 
 		$stmt = $db->prepare($sql);
 
@@ -865,8 +899,6 @@ class ProcessParams
 		$stmt->bindParam(':strengths',$strengths);
 		$stmt->bindParam(':weaknesses',$weaknesses);
 		$stmt->bindParam(':achievements',$achievements);
-		$stmt->bindParam(':personal_skills',$personal_skills);
-		$stmt->bindParam(':technical_skills',$technical_skills);
 		$stmt->bindParam(':username',$data['username']);
 
 		if($stmt->execute())
