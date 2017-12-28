@@ -1,4 +1,4 @@
-	<?php
+<?php
 /**
 * Retrieve parameters from url
 */
@@ -93,7 +93,7 @@ switch ($view) {
 		break;
 	case "getPersonalSkills":
 		$processParams = new ProcessParams();
-		$processParams->getPersonalSkills($_REQUEST);
+		$processParams->getPersonalSkills();
 		break;
 	case "getPersonalSkillsFilter":
 		$processParams = new ProcessParams();
@@ -101,11 +101,15 @@ switch ($view) {
 		break;
 	case "getTechnicalSkills":
 		$processParams = new ProcessParams();
-		$processParams->getTechnicalSkills($_REQUEST);
+		$processParams->getTechnicalSkills();
 		break;
 	case "getTechnicalSkillsFilter":
 		$processParams = new ProcessParams();
 		$processParams->getTechnicalSkillsFilter();
+		break;
+	case 'getSkills':
+		$processParams = new ProcessParams();
+		$processParams->getSkills();
 		break;
 	case "getThreadMessaegs":	
 		$processParams = new ProcessParams();
