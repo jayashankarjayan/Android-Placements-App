@@ -9,6 +9,7 @@
     tools:context="com.example.jayashankarjayan.placements.EditPersonalDetails">
 
     <android.support.design.widget.AppBarLayout
+        android:id="@+id/activity_edit_personal_details_app_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingTop="@dimen/appbar_padding_top"
@@ -55,8 +56,9 @@
 
     <android.support.v4.view.ViewPager
         android:id="@+id/container"
+        android:layout_height="wrap_content"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        app:layout_constraintTop_toBottomOf="@id/activity_edit_personal_details_app_bar"
         app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 
 </android.support.constraint.ConstraintLayout>

@@ -130,14 +130,7 @@ public class Functions {
 
     public String getLink()
     {
-//        return "https://always-live.000webhostapp.com/";
-//        return "http://192.168.43.158/Project Placements/";
-//        return "http://192.168.43.158/";
-//           return "http://172.20.10.2/Project Placements/";
-//           return "http://172.20.10.2/";
         return "http://119.226.13.174:9000/";
-//        return "127.0.0.1/Project Placements/";
-//        return "http://gnvsiom.org/placements/";
     }
 
     public String serializeString(String string)
