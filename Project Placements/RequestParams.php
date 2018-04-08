@@ -2,9 +2,10 @@
 /**
 * Retrieve parameters from url
 */
-require_once($_SERVER['DOCUMENT_ROOT'].'/Project Placements/includes/init.php');
+require_once($_SERVER['DOCUMENT_ROOT'].'/includes/init.php');
 
-require_once($_SERVER['DOCUMENT_ROOT'].'/Project Placements/ProcessParams.php');
+require_once($_SERVER['DOCUMENT_ROOT'].'/ProcessParams.php');
+require_once($_SERVER['DOCUMENT_ROOT']."/connection.php");
 if(isset($_REQUEST['view']))
 {
 	$view = $_REQUEST['view'];
@@ -46,6 +47,10 @@ switch ($view) {
 	case "applyToCompany":
 		$processParams = new ProcessParams();
 		$processParams->applyToCompany($_REQUEST);
+		break;
+	case "unapplyFromCompany":
+		$processParams = new ProcessParams();
+		$processParams->unapplyFromCompany($_REQUEST);
 		break;
 	case 'getCompanyFilter':
 		$processParams = new ProcessParams();
@@ -119,9 +124,17 @@ switch ($view) {
 		$processParams = new ProcessParams();
 		$processParams->getThreadComments($_REQUEST);
 		break;
+	case "updateGeneralDetails":
+		$processParams = new ProcessParams();
+		$processParams->updateGeneralDetails($_REQUEST);
+		break;
 	case "updatePersonalDetails":
 		$processParams = new ProcessParams();
 		$processParams->updatePersonalDetails($_REQUEST);
+		break;
+	case "updateTechnicalDetails":
+		$processParams = new ProcessParams();
+		$processParams->updateTechnicalDetails($_REQUEST);
 		break;
 	case "updatePassword":
 		$processParams = new ProcessParams();
@@ -142,6 +155,30 @@ switch ($view) {
 	case "deleteAccount":
 		$processParams = new ProcessParams();
 		$processParams->deleteAccount($_REQUEST);
+		break;
+	case "getComingSoonData":
+		$processParams = new ProcessParams();
+		$processParams->getComingSoonData($_REQUEST);
+		break;
+	case "forgotPassword":
+		$processParams = new ProcessParams();
+		$processParams->forgotPassword($_REQUEST);
+		break;
+	case "getAllStudents":
+		$processParams = new ProcessParams();
+		$processParams->getAllStudents($_REQUEST);
+		break;
+	case "getAllModerators":
+		$processParams = new ProcessParams();
+		$processParams->getAllModerators($_REQUEST);
+		break;
+	case "getAllCompanies":
+		$processParams = new ProcessParams();
+		$processParams->getAllCompanies($_REQUEST);
+		break;
+	case "adminLogin":
+		$processParams = new ProcessParams();
+		$processParams->adminLogin($_REQUEST);
 		break;
 	default:
 		echo "Error";
