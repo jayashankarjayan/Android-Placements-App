@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_login_relative_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.jayashankarjayan.placements.Login">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/activity_login_details_appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/appbar_padding_top"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_weight="1"
+            android:background="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:title="@string/app_name">
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+        android:id="@+id/activity_login_login_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/activity_login_details_appbar">
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/activity_login_text_view_username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="@dimen/activity_inner_space"
+            android:layout_marginLeft="@dimen/activity_inner_space"
+            android:layout_marginRight="@dimen/activity_inner_space"
+            android:layout_marginTop="@dimen/activity_inner_space">
+
+            <android.support.design.widget.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/activity_login_edit_text_username"
+                android:layout_below="@id/activity_login_text_view_username"
+                android:hint="Enter your username"
+                android:inputType="textEmailAddress"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/activity_login_text_view_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@id/activity_login_text_view_username"
+            android:layout_marginBottom="@dimen/activity_inner_space"
+            android:layout_marginLeft="@dimen/activity_inner_space"
+            android:layout_marginRight="@dimen/activity_inner_space"
+            android:layout_marginTop="@dimen/activity_inner_space"
+            app:passwordToggleEnabled="true">
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/activity_login_edit_text_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter your password"
+                android:layout_below="@id/activity_login_text_view_password"
+                android:inputType="textPassword"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:id="@+id/activity_login_button_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Login"
+            android:layout_below="@id/activity_login_text_view_password"
+            android:layout_alignParentStart="true"
+            android:background="@drawable/container_box_button"
+            android:textColor="@color/white"
+            android:layout_marginBottom="@dimen/activity_inner_space"
+            android:layout_marginLeft="@dimen/activity_inner_space"
+            android:layout_marginRight="@dimen/activity_inner_space"
+            android:layout_marginTop="@dimen/activity_inner_space"/>
+
+        <TextView
+            android:id="@+id/activity_login_text_view_or_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OR"
+            android:layout_marginStart="@dimen/activity_inner_space"
+            android:layout_marginEnd="@dimen/activity_inner_space"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/activity_login_text_view_password"
+            android:layout_toEndOf="@id/activity_login_button_login"/>
+        <Button
+            android:id="@+id/activity_login_button_admin_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Admin Login"
+            android:layout_below="@id/activity_login_text_view_password"
+            android:layout_toEndOf="@id/activity_login_text_view_or_text"
+            android:background="@drawable/container_box_button"
+            android:textColor="@color/white"
+            android:paddingStart="@dimen/activity_inner_space"
+            android:paddingEnd="@dimen/activity_inner_space"
+            android:layout_marginBottom="@dimen/activity_inner_space"
+            android:layout_marginLeft="@dimen/activity_inner_space"
+            android:layout_marginRight="@dimen/activity_inner_space"
+            android:layout_marginTop="@dimen/activity_inner_space"/>
+
+        <TextView
+            android:id="@+id/activity_login_text_view_forgot_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="Forgot Password"
+            android:textSize="15sp"
+            android:textColor="@color/colorPrimary"
+            android:clickable="true"
+            android:layout_below="@id/activity_login_button_login"
+            android:layout_marginBottom="@dimen/activity_inner_space"
+            android:layout_marginLeft="@dimen/activity_inner_space"
+            android:layout_marginRight="@dimen/activity_inner_space"
+            android:layout_marginTop="@dimen/activity_inner_space"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/activity_login_forgot_password_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/activity_login_details_appbar"
+        android:visibility="gone">
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/activity_inner_space"
+            android:layout_marginLeft="@dimen/activity_inner_space"
+            android:layout_marginRight="@dimen/activity_inner_space"
+            android:layout_marginTop="@dimen/activity_inner_space">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/activity_login_edit_text_forgot_password_username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/activity_login_text_view_username"
+                android:hint="Enter your username"
+                android:text="reclusegeorge"
+                android:inputType="textEmailAddress"/>
+        </android.support.design.widget.TextInputLayout>
+
+
+        <Button
+            android:id="@+id/activity_login_button_recover_account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Recover Account"
+            android:layout_below="@id/activity_login_text_view_password"
+            android:layout_alignParentStart="true"
+            android:background="@drawable/container_box_button"
+            android:textColor="@color/white"
+            android:paddingStart="@dimen/activity_inner_space"
+            android:paddingEnd="@dimen/activity_inner_space"
+            android:layout_marginBottom="@dimen/activity_inner_space"
+            android:layout_marginLeft="@dimen/activity_inner_space"
+            android:layout_marginRight="@dimen/activity_inner_space"
+            android:layout_marginTop="@dimen/activity_inner_space"/>
+    </LinearLayout>
+</RelativeLayout>

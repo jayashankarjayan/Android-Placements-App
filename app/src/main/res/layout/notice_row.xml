@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    android:id="@+id/notice_row_card_view"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    card_view:cardCornerRadius="4dp"
+    android:layout_marginTop="@dimen/activity_inner_space"
+    android:layout_marginBottom="@dimen/activity_inner_space"
+    android:layout_marginLeft="@dimen/activity_inner_space"
+    android:layout_marginRight="@dimen/activity_inner_space">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_inner_space"
+        android:layout_marginLeft="@dimen/activity_inner_space"
+        android:layout_marginRight="@dimen/activity_inner_space"
+        android:paddingBottom="@dimen/activity_inner_space"
+        android:background="@color/row_background">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_inner_space"
+            android:layout_marginStart="@dimen/activity_inner_space"
+            android:layout_marginEnd="@dimen/activity_inner_space"
+            tools:text="Notice Title"
+            android:textSize="18sp"
+            android:id="@+id/activity_notices_text_view_notice_title"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_inner_space"
+            android:layout_marginStart="@dimen/activity_inner_space"
+            android:layout_marginEnd="@dimen/activity_inner_space"
+            tools:text="Notice Content"
+            android:textSize="15sp"
+            android:id="@+id/activity_notices_text_view_notice_content"
+            android:layout_below="@id/activity_notices_text_view_notice_title"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            tools:text="- Adder Name"
+            android:textSize="15sp"
+            android:textStyle="italic"
+            android:layout_marginTop="@dimen/activity_inner_space"
+            android:layout_marginBottom="@dimen/activity_inner_space"
+            android:layout_marginStart="@dimen/activity_inner_space"
+            android:layout_marginEnd="@dimen/activity_inner_space"
+            android:id="@+id/activity_notices_text_view_adder_name"
+            android:layout_below="@id/activity_notices_text_view_notice_content"/>
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

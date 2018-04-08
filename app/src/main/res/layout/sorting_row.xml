@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    card_view:cardCornerRadius="4dp"
+    android:layout_marginTop="@dimen/activity_inner_space"
+    android:layout_marginBottom="@dimen/activity_inner_space"
+    android:layout_marginLeft="@dimen/activity_inner_space"
+    android:layout_marginRight="@dimen/activity_inner_space">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_inner_space"
+        android:layout_marginLeft="@dimen/activity_inner_space"
+        android:layout_marginRight="@dimen/activity_inner_space"
+        android:layout_marginBottom="@dimen/activity_inner_space">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:paddingTop="@dimen/activity_inner_space"
+            android:paddingBottom="@dimen/activity_inner_space"
+            android:layout_centerVertical="true"
+            android:gravity="left"
+            android:id="@+id/activity_sorting_row_text_view_title"/>
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

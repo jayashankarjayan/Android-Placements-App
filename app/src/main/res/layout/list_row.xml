@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    card_view:cardCornerRadius="4dp"
+    android:layout_marginTop="@dimen/activity_inner_space"
+    android:layout_marginBottom="@dimen/activity_inner_space"
+    android:layout_marginLeft="@dimen/activity_inner_space"
+    android:layout_marginRight="@dimen/activity_inner_space">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_inner_space"
+        android:layout_marginLeft="@dimen/activity_inner_space"
+        android:layout_marginRight="@dimen/activity_inner_space"
+        android:paddingBottom="@dimen/activity_inner_space"
+        android:gravity="center_vertical"
+        android:background="@color/row_background">
+
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/jobName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"/>
+
+    <RelativeLayout
+        android:id="@+id/list_row_accept_ignore_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_inner_space"
+        android:layout_below="@id/jobName"
+        android:layout_alignParentEnd="true"
+        android:stateListAnimator="@animator/expanded_recycler_view_selection"
+        android:animateLayoutChanges="true">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.3dp"
+            android:background="@android:color/black"/>
+
+        <Button
+            android:id="@+id/list_row_apply_unapply_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="30dp"
+            android:text="Accept"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_marginLeft="@dimen/activity_inner_space"
+            android:layout_marginRight="@dimen/activity_inner_space"
+            android:paddingLeft="@dimen/activity_inner_space"
+            android:paddingRight="@dimen/activity_inner_space"
+            android:textColor="@color/green"
+            android:layout_alignParentBottom="true"
+            android:foreground="@drawable/recycler_view_button_touch_effect"
+            android:background="@drawable/recycler_view_button_positive"/>
+    </RelativeLayout>
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

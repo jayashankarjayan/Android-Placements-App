@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "288534589182",
+    "firebase_url": "https://placements-3e609.firebaseio.com",
+    "project_id": "placements-3e609",
+    "storage_bucket": "placements-3e609.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:288534589182:android:b2c25c1947efd6ec",
+        "android_client_info": {
+          "package_name": "com.example.jayashankarjayan.placements"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "288534589182-m5qa00k8t62g3268n3ct12ukh2do5ghr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDYtuQqwMuYRt6OsM48dFfOU8roR92SAp8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

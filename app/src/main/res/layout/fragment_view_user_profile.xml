@@ -1,0 +1,358 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.jayashankarjayan.placements.ViewUserProfileFragment">
+
+
+    <RelativeLayout
+        android:id="@+id/fragment_view_user_profile_layout_progressbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ProgressBar xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/activity_edit_user_profile_progressBar"
+            android:layout_centerInParent="true"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbarThumbVertical="@drawable/scroll_view_color">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minWidth="300dp"
+                android:maxHeight="300dp"
+                android:id="@+id/editing_image_of_the_user"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true"
+                android:background="@color/light_grey"
+                android:contentDescription="@string/image_of_the_user"/>
+
+
+            <!-- Start Personal Details-->
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card_view:cardCornerRadius="4dp"
+                android:layout_marginTop="@dimen/activity_inner_space"
+                android:layout_marginBottom="@dimen/activity_inner_space"
+                android:layout_marginLeft="@dimen/activity_inner_space"
+                android:layout_marginRight="@dimen/activity_inner_space">
+
+                <RelativeLayout
+                    android:id="@+id/fragment_view_user_profile_layout_personal_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/container_box">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:paddingTop="@dimen/activity_inner_space"
+                        android:textSize="28sp"
+                        android:id="@+id/editing_name_of_user"
+                        android:layout_alignParentTop="true"
+                        android:textColor="@color/container_box_text"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:id="@+id/editing_college_of_user"
+                        android:layout_below="@id/editing_name_of_user"
+                        android:paddingTop="@dimen/activity_inner_space"
+                        android:textSize="18sp"
+                        android:textColor="@color/container_box_text"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:paddingTop="@dimen/activity_inner_space"
+                        android:paddingBottom="@dimen/contanier_inner_bottom_padding"
+                        android:id="@+id/editing_achievements_of_user"
+                        android:layout_below="@id/editing_college_of_user"
+                        android:textColor="@color/container_box_text"/>
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+            <!-- End Personal Details -->
+
+            <!-- Start Personal Skills -->
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card_view:cardCornerRadius="4dp"
+                android:layout_marginTop="@dimen/activity_inner_space"
+                android:layout_marginBottom="@dimen/activity_inner_space"
+                android:layout_marginLeft="@dimen/activity_inner_space"
+                android:layout_marginRight="@dimen/activity_inner_space">
+
+                <RelativeLayout
+                    android:id="@+id/fragment_view_user_profile_layout_personal_skilla"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/container_box">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:paddingTop="@dimen/activity_inner_space"
+                            android:paddingLeft="@dimen/activity_inner_space"
+                            android:paddingStart="@dimen/activity_inner_space"
+                            android:paddingEnd="@dimen/activity_inner_space"
+                            android:paddingRight="@dimen/activity_inner_space"
+                            android:text="@string/title_personal_skills"
+                            android:textSize="@dimen/headings"
+                            android:layout_alignParentTop="true"
+                            android:id="@+id/editing_personal_skills"
+                            android:textColor="@color/container_box_text"
+                            android:paddingBottom="@dimen/contanier_inner_bottom_padding"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/editing_list_of_my_personal_skills"
+                            android:layout_below="@id/editing_personal_skills"
+                            android:paddingTop="@dimen/activity_inner_space"
+                            android:paddingLeft="@dimen/activity_inner_space"
+                            android:paddingStart="@dimen/activity_inner_space"
+                            android:paddingEnd="@dimen/activity_inner_space"
+                            android:paddingRight="@dimen/activity_inner_space"
+                            android:paddingBottom="@dimen/activity_inner_space"
+                            android:textSize="15sp"
+                            android:textColor="@color/container_box_text"/>
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+            <!-- End Personal Skills -->
+
+            <!-- Start Strengths-->
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card_view:cardCornerRadius="4dp"
+                android:layout_marginTop="@dimen/activity_inner_space"
+                android:layout_marginBottom="@dimen/activity_inner_space"
+                android:layout_marginLeft="@dimen/activity_inner_space"
+                android:layout_marginRight="@dimen/activity_inner_space">
+                <RelativeLayout
+                    android:id="@+id/fragment_view_user_profile_layout_strengths"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/container_box">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:paddingTop="@dimen/activity_inner_space"
+                        android:paddingLeft="@dimen/activity_inner_space"
+                        android:paddingStart="@dimen/activity_inner_space"
+                        android:paddingEnd="@dimen/activity_inner_space"
+                        android:paddingRight="@dimen/activity_inner_space"
+                        android:text="@string/title_strengths"
+                        android:textSize="@dimen/headings"
+                        android:layout_alignParentTop="true"
+                        android:id="@+id/editing_strengths"
+                        android:textColor="@color/container_box_text"
+                        android:paddingBottom="@dimen/contanier_inner_bottom_padding"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/editing_list_of_my_strengths"
+                        android:layout_below="@id/editing_strengths"
+                        android:paddingTop="@dimen/activity_inner_space"
+                        android:paddingBottom="@dimen/activity_inner_space"
+                        android:textSize="15sp"
+                        android:paddingLeft="@dimen/activity_inner_space"
+                        android:paddingStart="@dimen/activity_inner_space"
+                        android:paddingEnd="@dimen/activity_inner_space"
+                        android:paddingRight="@dimen/activity_inner_space"
+                        android:textColor="@color/container_box_text"/>
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+            <!-- End Strengths -->
+
+            <!-- Start Weaknesses -->
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card_view:cardCornerRadius="4dp"
+                android:layout_marginTop="@dimen/activity_inner_space"
+                android:layout_marginBottom="@dimen/activity_inner_space"
+                android:layout_marginLeft="@dimen/activity_inner_space"
+                android:layout_marginRight="@dimen/activity_inner_space">
+                <RelativeLayout
+                    android:id="@+id/fragment_view_user_profile_layout_weaknesses"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/container_box">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:paddingTop="@dimen/activity_inner_space"
+                        android:paddingLeft="@dimen/activity_inner_space"
+                        android:paddingStart="@dimen/activity_inner_space"
+                        android:paddingEnd="@dimen/activity_inner_space"
+                        android:paddingRight="@dimen/activity_inner_space"
+                        android:text="@string/title_weaknesses"
+                        android:textSize="@dimen/headings"
+                        android:layout_alignParentTop="true"
+                        android:id="@+id/editing_weaknesses"
+                        android:textColor="@color/container_box_text"
+                        android:paddingBottom="@dimen/contanier_inner_bottom_padding"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/editing_list_of_my_weaknesses"
+                        android:layout_below="@id/editing_weaknesses"
+                        android:paddingTop="@dimen/activity_inner_space"
+                        android:paddingBottom="@dimen/activity_inner_space"
+                        android:textSize="15sp"
+                        android:paddingLeft="@dimen/activity_inner_space"
+                        android:paddingStart="@dimen/activity_inner_space"
+                        android:paddingEnd="@dimen/activity_inner_space"
+                        android:paddingRight="@dimen/activity_inner_space"
+                        android:textColor="@color/container_box_text"/>
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+            <!-- End Weaknesses -->
+
+            <!-- Start Technical Skills -->
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card_view:cardCornerRadius="4dp"
+                android:layout_marginTop="@dimen/activity_inner_space"
+                android:layout_marginBottom="@dimen/activity_inner_space"
+                android:layout_marginLeft="@dimen/activity_inner_space"
+                android:layout_marginRight="@dimen/activity_inner_space">
+                <RelativeLayout
+                    android:id="@+id/fragment_view_user_profile_layout_technical_skills"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/container_box">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:paddingTop="@dimen/activity_inner_space"
+                        android:paddingLeft="@dimen/activity_inner_space"
+                        android:paddingStart="@dimen/activity_inner_space"
+                        android:paddingEnd="@dimen/activity_inner_space"
+                        android:text="@string/title_technical_skills"
+                        android:paddingRight="@dimen/activity_inner_space"
+                        android:textSize="@dimen/headings"
+                        android:layout_alignParentTop="true"
+                        android:id="@+id/editing_technical_skills"
+                        android:textColor="@color/container_box_text"
+                        android:paddingBottom="@dimen/contanier_inner_bottom_padding"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/editing_list_of_my_technical_skills"
+                        android:layout_below="@id/editing_technical_skills"
+                        android:paddingTop="@dimen/activity_inner_space"
+                        android:paddingBottom="@dimen/activity_inner_space"
+                        android:textSize="15sp"
+                        android:paddingLeft="@dimen/activity_inner_space"
+                        android:paddingStart="@dimen/activity_inner_space"
+                        android:paddingEnd="@dimen/activity_inner_space"
+                        android:paddingRight="@dimen/activity_inner_space"
+                        android:textColor="@color/container_box_text"/>
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+            <!-- End Technical Skills -->
+
+
+            <!-- Start Academic Details -->
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card_view:cardCornerRadius="4dp"
+                android:layout_marginTop="@dimen/activity_inner_space"
+                android:layout_marginBottom="@dimen/activity_inner_space"
+                android:layout_marginLeft="@dimen/activity_inner_space"
+                android:layout_marginRight="@dimen/activity_inner_space">
+
+                <RelativeLayout
+                    android:id="@+id/fragment_view_user_profile_layout_academics"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/container_box"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/editing_academics"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:paddingTop="@dimen/activity_inner_space"
+                        android:paddingLeft="@dimen/activity_inner_space"
+                        android:paddingStart="@dimen/activity_inner_space"
+                        android:paddingEnd="@dimen/activity_inner_space"
+                        android:text="@string/title_academics"
+                        android:paddingRight="@dimen/activity_inner_space"
+                        android:textSize="@dimen/headings"
+                        android:layout_alignParentTop="true"
+                        android:textColor="@color/container_box_text"
+                        android:paddingBottom="@dimen/contanier_inner_bottom_padding"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/editing_academics"
+                        android:paddingTop="@dimen/activity_inner_space"
+                        android:paddingBottom="@dimen/activity_inner_space"
+                        android:textSize="15sp"
+                        android:paddingLeft="@dimen/activity_inner_space"
+                        android:paddingStart="@dimen/activity_inner_space"
+                        android:paddingEnd="@dimen/activity_inner_space"
+                        android:paddingRight="@dimen/activity_inner_space"
+                        android:textColor="@color/container_box_text"/>
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+            <!-- End Academic Details -->
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/activity_inner_space"
+        android:layout_marginBottom="@dimen/activity_inner_space"
+        android:layout_marginTop="@dimen/activity_inner_space"
+        android:layout_marginStart="@dimen/activity_inner_space">
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fragment_view_user_profile_floating_action_button_edit_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            app:srcCompat="@drawable/edit_my_profile"/>
+    </RelativeLayout>
+</FrameLayout>

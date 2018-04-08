@@ -1,0 +1,61 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.jayashankarjayan.placements.AppliedCompaniesFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ProgressBar xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/fragment_applied_companies_progressBar"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"/>
+
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/activity_inner_space"
+            android:paddingRight="@dimen/activity_inner_space"
+            android:layout_marginTop="@dimen/activity_inner_space"
+            android:layout_marginBottom="@dimen/activity_inner_space"
+            android:id="@+id/fragment_applied_companies_swipe_refresh">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/fragment_applied_companies_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:elevation="3dp"
+                android:scrollbars="vertical"
+                android:scrollbarThumbVertical="@drawable/scroll_view_color"/>
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+        <ImageView
+            android:id="@+id/fragment_applied_companies_nothing_to_show_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/applied_to_company_big"
+            android:layout_centerInParent="true"
+            android:visibility="gone"/>
+        <TextView
+            android:id="@+id/fragment_applied_companies_nothing_to_show_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/fragment_applied_companies_nothing_to_show_icon"
+            android:layout_centerHorizontal="true"
+            tools:text="Companies you have applied to come here"
+            android:textAlignment="center"
+            android:textSize="22sp"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+
+</FrameLayout>

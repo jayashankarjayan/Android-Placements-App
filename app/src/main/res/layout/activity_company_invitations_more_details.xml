@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.jayashankarjayan.placements.CompanyInvitationsMoreDetails">
+
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/activity_company_invitations_more_details_appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/appbar_padding_top"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_weight="1"
+            android:background="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:title="More details">
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+
+    <ProgressBar
+        android:id="@+id/activity_company_invitations_more_details_progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <TextView
+        android:id="@+id/activity_company_invitations_more_details_company"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Company name:"
+        android:textSize="@dimen/headings"
+        app:layout_constraintTop_toBottomOf="@id/activity_company_invitations_more_details_appbar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="@dimen/activity_inner_space"
+        android:layout_marginRight="@dimen/activity_inner_space"
+        android:layout_marginTop="@dimen/activity_inner_space"
+        android:layout_marginBottom="@dimen/activity_inner_space"/>
+
+    <TextView
+        android:id="@+id/activity_company_invitations_more_details_selection_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Selection Date: "
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/activity_company_invitations_more_details_company"
+        android:layout_marginLeft="@dimen/activity_inner_space"
+        android:layout_marginRight="@dimen/activity_inner_space"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_marginBottom="@dimen/activity_inner_space"/>
+
+    <TextView
+        android:id="@+id/activity_company_invitations_more_details_maximum_backlog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Maximum Backlogs: "
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/activity_company_invitations_more_details_selection_date"
+        android:layout_marginLeft="@dimen/activity_inner_space"
+        android:layout_marginRight="@dimen/activity_inner_space"
+        android:layout_marginTop="@dimen/activity_inner_space"
+        android:layout_marginBottom="@dimen/activity_inner_space"/>
+
+    <TextView
+        android:id="@+id/activity_company_invitations_more_details_venue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Venue: "
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/activity_company_invitations_more_details_maximum_backlog"
+        android:layout_marginLeft="@dimen/activity_inner_space"
+        android:layout_marginRight="@dimen/activity_inner_space"
+        android:layout_marginTop="@dimen/activity_inner_space"
+        android:layout_marginBottom="@dimen/activity_inner_space"/>
+
+    <TextView
+        android:id="@+id/activity_company_invitations_more_details_vacancies_for"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Vacancies For: "
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/activity_company_invitations_more_details_venue"
+        android:layout_marginLeft="@dimen/activity_inner_space"
+        android:layout_marginRight="@dimen/activity_inner_space"
+        android:layout_marginTop="@dimen/activity_inner_space"
+        android:layout_marginBottom="@dimen/activity_inner_space"/>
+
+    <TextView
+        android:id="@+id/activity_company_invitations_more_details_criteria"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Criteria: "
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/activity_company_invitations_more_details_vacancies_for"
+        android:layout_marginLeft="@dimen/activity_inner_space"
+        android:layout_marginRight="@dimen/activity_inner_space"
+        android:layout_marginTop="@dimen/activity_inner_space"
+        android:layout_marginBottom="@dimen/activity_inner_space"/>
+
+    <TextView
+        android:id="@+id/activity_company_invitations_more_details_additional_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Additional Information: "
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/activity_company_invitations_more_details_criteria"
+        android:layout_marginLeft="@dimen/activity_inner_space"
+        android:layout_marginRight="@dimen/activity_inner_space"
+        android:layout_marginTop="@dimen/activity_inner_space"
+        android:layout_marginBottom="@dimen/activity_inner_space"/>
+
+    <Button
+        android:id="@+id/activity_company_invitations_more_details_accept"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Accept"
+        android:minHeight="30dp"
+        android:background="@drawable/recycler_view_button_positive"
+        android:textColor="@color/green"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/activity_company_invitations_more_details_additional_info"
+        android:layout_marginLeft="@dimen/activity_inner_space"
+        android:layout_marginRight="@dimen/activity_inner_space"
+        android:layout_marginTop="@dimen/activity_inner_space"
+        android:layout_marginBottom="@dimen/activity_inner_space"/>
+
+    <Button
+        android:id="@+id/activity_company_invitations_more_details_decline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Decline"
+
+        android:minHeight="30dp"
+        android:background="@drawable/recycler_view_button_negative"
+        android:textColor="@color/red"
+        app:layout_constraintLeft_toRightOf="@id/activity_company_invitations_more_details_accept"
+        app:layout_constraintTop_toBottomOf="@id/activity_company_invitations_more_details_additional_info"
+        android:layout_marginLeft="@dimen/activity_inner_space"
+        android:layout_marginRight="@dimen/activity_inner_space"
+        android:layout_marginTop="@dimen/activity_inner_space"
+        android:layout_marginBottom="@dimen/activity_inner_space"/>
+</android.support.constraint.ConstraintLayout>

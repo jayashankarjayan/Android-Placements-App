@@ -1,0 +1,39 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.jayashankarjayan.placements.DiscussionForumFragment">
+
+    <RelativeLayout
+        android:id="@+id/activity_chat"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ProgressBar
+            android:id="@+id/fragment_discussion_forum_progressbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"/>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/newThread"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/activity_inner_space"
+            app:srcCompat="@drawable/plus"/>
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/chat_conversation_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:elevation="3dp"
+            android:scrollbars="vertical"
+            android:scrollbarThumbVertical="@drawable/scroll_view_color"/>
+    </RelativeLayout>
+
+</FrameLayout>

@@ -1,0 +1,214 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.jayashankarjayan.placements.EditUserGeneralDetailsFragment">
+
+
+    <RelativeLayout
+        android:id="@+id/fragment_edit_general_details_relative_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ProgressBar
+            android:id="@+id/activity_edit_personal_details_progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+
+        <ScrollView
+            android:id="@+id/activity_user_profile_scrollview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbarThumbVertical="@drawable/scroll_view_color">
+
+            <RelativeLayout
+                android:id="@+id/activity_user_details_inner_relative_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageButton
+                    android:id="@+id/activity_personal_details_image_of_the_user"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minWidth="300dp"
+                    android:maxHeight="300dp"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:background="@color/light_grey"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentTop="true"
+                    android:contentDescription="@string/image_of_the_user"/>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/activity_user_details_text_input_layout_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/activity_personal_details_image_of_the_user"
+                    android:layout_marginTop="@dimen/activity_inner_space"
+                    android:layout_marginBottom="@dimen/activity_inner_space"
+                    android:layout_marginLeft="@dimen/activity_inner_space"
+                    android:layout_marginRight="@dimen/activity_inner_space">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/activity_personal_details_edit_text_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:hint="@string/edit_name"
+                        android:layout_below="@id/activity_personal_details_image_of_the_user"  />
+
+                </android.support.design.widget.TextInputLayout>
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/activity_user_details_text_input_layout_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/activity_user_details_text_input_layout_name"
+                    android:layout_marginTop="@dimen/activity_inner_space"
+                    android:layout_marginBottom="@dimen/activity_inner_space"
+                    android:layout_marginLeft="@dimen/activity_inner_space"
+                    android:layout_marginRight="@dimen/activity_inner_space">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/activity_personal_details_edit_text_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textEmailAddress"
+                        android:hint="@string/edit_emsil"
+                        android:layout_below="@id/activity_user_details_text_input_layout_name"/>
+
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/activity_user_details_text_input_layout_contact"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/activity_user_details_text_input_layout_email"
+                    android:layout_marginTop="@dimen/activity_inner_space"
+                    android:layout_marginBottom="@dimen/activity_inner_space"
+                    android:layout_marginLeft="@dimen/activity_inner_space"
+                    android:layout_marginRight="@dimen/activity_inner_space">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:hint="@string/edit_contact"
+                        android:id="@+id/activity_personal_details_edit_text_contact"
+                        android:layout_below="@id/activity_user_details_text_input_layout_email"/>
+
+                </android.support.design.widget.TextInputLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/edit_gender"
+                    android:layout_below="@id/activity_user_details_text_input_layout_contact"
+                    android:textSize="14sp"
+                    android:layout_marginTop="@dimen/activity_inner_space"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginLeft="@dimen/activity_inner_space"
+                    android:layout_marginRight="@dimen/activity_inner_space"
+                    android:id="@+id/activity_personal_details_text_view_gender"/>
+
+                <RadioGroup
+                    android:id="@+id/activity_personal_details_radio_group_gender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_below="@id/activity_personal_details_text_view_gender"
+                    android:layout_marginLeft="@dimen/activity_inner_space"
+                    android:layout_marginRight="@dimen/activity_inner_space">
+
+                    <RadioButton
+                        android:id="@+id/activity_personal_details_radio_button_male"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/edit_gender_male"/>
+                    <RadioButton
+                        android:id="@+id/activity_personal_details_radio_button_female"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/edit_gender_female"/>
+                </RadioGroup>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/activity_user_details_text_input_college"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/activity_personal_details_radio_group_gender"
+                    android:layout_marginTop="@dimen/activity_inner_space"
+                    android:layout_marginBottom="@dimen/activity_inner_space"
+                    android:layout_marginLeft="@dimen/activity_inner_space"
+                    android:layout_marginRight="@dimen/activity_inner_space">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/activity_personal_details_edit_text_college"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/edit_college"/>
+
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/activity_user_details_text_input_achievements"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/activity_user_details_text_input_college"
+                    android:layout_marginTop="@dimen/activity_inner_space"
+                    android:layout_marginBottom="@dimen/activity_inner_space"
+                    android:layout_marginLeft="@dimen/activity_inner_space"
+                    android:layout_marginRight="@dimen/activity_inner_space">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/activity_personal_details_edit_text_achievement"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/edit_achievements"
+                        android:scrollbars="vertical"
+                        android:maxLines="5"
+                        android:scrollbarThumbVertical="@drawable/scroll_view_color"
+                        android:layout_below="@id/activity_personal_details_edit_text_college"/>
+
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/activity_user_details_text_input_layout_strengths"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/activity_user_details_text_input_achievements"
+                    android:layout_marginTop="@dimen/activity_inner_space"
+                    android:layout_marginBottom="@dimen/activity_inner_space"
+                    android:layout_marginLeft="@dimen/activity_inner_space"
+                    android:layout_marginRight="@dimen/activity_inner_space">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/activity_user_details_strengths"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/edit_strengths"/>
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/activity_user_details_text_input_layout_weaknesses"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/activity_user_details_text_input_layout_strengths"
+                    android:layout_marginTop="@dimen/activity_inner_space"
+                    android:layout_marginBottom="@dimen/activity_inner_space"
+                    android:layout_marginLeft="@dimen/activity_inner_space"
+                    android:layout_marginRight="@dimen/activity_inner_space">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/activity_user_details_weaknesses"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/edit_weaknesses"/>
+                </android.support.design.widget.TextInputLayout>
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+</FrameLayout>

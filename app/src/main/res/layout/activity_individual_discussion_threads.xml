@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/white"
+    tools:context="com.example.jayashankarjayan.placements.IndividualDiscussionThreads">
+
+    <TextView
+        android:id="@+id/activity_individual_discussion_threads_thread_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="wedsafdsd"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:id="@+id/activity_individual_discussion_threads_thread_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="sfasfdsf"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_below="@id/activity_individual_discussion_threads_thread_text"/>
+
+    <TextView
+        android:id="@+id/activity_individual_discussion_threads_posted_by"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_below="@id/activity_individual_discussion_threads_thread_time"/>
+</RelativeLayout>
