@@ -130,7 +130,8 @@ public class Functions {
 
     public String getLink()
     {
-        return "http://119.226.13.174:9000/";
+        /* Change the IP Address here */
+        return "";
     }
 
     public String serializeString(String string)
