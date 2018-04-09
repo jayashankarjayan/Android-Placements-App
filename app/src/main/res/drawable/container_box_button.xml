@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape android:shape="rectangle" xmlns:android="http://schemas.android.com/apk/res/android">
+    <gradient android:startColor="@color/button_color"
+        android:endColor="@color/button_color"/>
+    <corners android:bottomLeftRadius="@dimen/container_box_button_radius"
+        android:bottomRightRadius="@dimen/container_box_button_radius"
+        android:topLeftRadius="@dimen/container_box_button_radius"
+        android:topRightRadius="@dimen/container_box_button_radius"/>
+</shape>

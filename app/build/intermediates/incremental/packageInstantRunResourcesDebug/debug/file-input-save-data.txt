@@ -1,0 +1,23 @@
+#Internal package file, do not edit.
+#Sun Apr 08 19:28:48 IST 2018
+2.base=C\:\\Users\\Jayashankar Jayan\\Documents\\GitHub\\Android-Pacements-App\\app\\build\\intermediates\\assets\\debug
+0.path=fonts/robotobold.ttf
+2.baseType=DIRECTORY
+3.base=C\:\\Users\\Jayashankar Jayan\\Documents\\GitHub\\Android-Pacements-App\\app\\build\\intermediates\\assets\\debug
+2.set=ASSET
+1.path=fonts/roboto.ttf
+4.base=C\:\\Users\\Jayashankar Jayan\\Documents\\GitHub\\Android-Pacements-App\\app\\build\\intermediates\\assets\\debug
+count=5
+2.path=fonts/robotoblack.ttf
+4.set=ASSET
+3.path=fonts/oxygenbold.ttf
+3.baseType=DIRECTORY
+1.set=ASSET
+4.path=fonts/oxygenregular.ttf
+1.baseType=DIRECTORY
+0.base=C\:\\Users\\Jayashankar Jayan\\Documents\\GitHub\\Android-Pacements-App\\app\\build\\intermediates\\assets\\debug
+0.baseType=DIRECTORY
+3.set=ASSET
+1.base=C\:\\Users\\Jayashankar Jayan\\Documents\\GitHub\\Android-Pacements-App\\app\\build\\intermediates\\assets\\debug
+4.baseType=DIRECTORY
+0.set=ASSET

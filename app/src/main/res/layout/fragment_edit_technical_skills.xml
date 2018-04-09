@@ -1,0 +1,38 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.jayashankarjayan.placements.EditTechnicalSkillsFragment">
+
+
+    <RelativeLayout
+        android:id="@+id/fragment_edit_technical_skills_relative_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/activity_user_details_text_technical_skills"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_inner_space"
+            android:layout_marginBottom="@dimen/activity_inner_space"
+            android:layout_marginLeft="@dimen/activity_inner_space"
+            android:layout_marginRight="@dimen/activity_inner_space">
+
+            <android.support.v7.widget.AppCompatAutoCompleteTextView
+                android:id="@+id/activity_user_details_technical_skills"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/edit_technical_skills"
+                android:maxLines="1"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <ListView
+            android:id="@+id/activity_user_details_listview_technical_skills"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:dividerHeight="0.5dp"
+            android:layout_below="@id/activity_user_details_text_technical_skills"
+            android:scrollbarThumbVertical="@drawable/scroll_view_color"/>
+    </RelativeLayout>
+</FrameLayout>

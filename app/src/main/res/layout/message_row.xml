@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    card_view:cardCornerRadius="4dp"
+    android:layout_marginTop="@dimen/activity_inner_space"
+    android:layout_marginBottom="@dimen/activity_inner_space"
+    android:layout_marginLeft="@dimen/activity_inner_space"
+    android:layout_marginRight="@dimen/activity_inner_space">
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_inner_space"
+        android:layout_marginLeft="@dimen/activity_inner_space"
+        android:layout_marginRight="@dimen/activity_inner_space"
+        android:paddingTop="@dimen/activity_inner_space"
+        android:paddingBottom="@dimen/activity_inner_space"
+        android:background="@color/row_background">
+
+
+        <ImageView
+            android:id="@+id/message_row_image_of_user"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:paddingLeft="@dimen/activity_inner_space"
+            android:scaleType="fitCenter"
+            android:layout_alignParentTop="true"/>
+        <TextView
+            android:id="@+id/message_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/message_row_image_of_user"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="@dimen/activity_inner_space"
+            android:textStyle="normal|bold"/>
+
+        <TextView
+            android:id="@+id/posted_by"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/message_row_image_of_user"
+            android:layout_marginLeft="@dimen/activity_inner_space"
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/message_user"
+            android:background="@android:color/transparent"/>
+
+        <TextView
+            android:id="@+id/message_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/posted_by"
+            android:layout_alignParentEnd="true"
+            android:layout_marginLeft="@dimen/activity_inner_space"
+            android:layout_marginRight="@dimen/activity_inner_space"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@id/message_time"
+            android:layout_marginLeft="@dimen/activity_inner_space"
+            android:layout_marginRight="@dimen/activity_inner_space"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:background="@android:color/black"/>
+        <Button
+            android:id="@+id/message_row_like"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/message_time"
+            android:layout_alignParentStart="true"
+            android:drawableLeft="@drawable/thumb_up"
+            android:text="Like"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_marginLeft="@dimen/activity_inner_space"
+            android:layout_marginRight="@dimen/activity_inner_space"
+            android:background="@android:color/transparent"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/message_time"
+            android:drawableLeft="@drawable/comment"
+            android:drawablePadding="@dimen/activity_inner_space"
+            android:text="Comment"
+            android:layout_toRightOf="@id/message_row_like"
+            android:layout_toEndOf="@id/message_row_like"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_marginLeft="@dimen/activity_inner_space"
+            android:layout_marginRight="@dimen/activity_inner_space"
+            android:background="@android:color/transparent"/>
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

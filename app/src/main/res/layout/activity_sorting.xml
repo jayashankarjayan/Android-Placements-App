@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.jayashankarjayan.placements.SortingActivity">
+
+
+    <TextView
+        android:id="@+id/activity_sorting_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="Sort By: "
+        android:layout_alignParentTop="true"
+        android:paddingTop="@dimen/activity_inner_space"
+        android:paddingLeft="@dimen/activity_inner_space"
+        android:paddingRight="@dimen/activity_inner_space"
+        android:layout_marginTop="@dimen/activity_inner_space" />
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/activity_sorting_progressBar"
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:visibility="gone"/>
+
+      <android.support.v7.widget.RecyclerView
+            android:id="@+id/activity_sorting_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+          android:layout_below="@id/activity_sorting_title"
+            android:elevation="3dp"
+            android:scrollbars="vertical"
+            android:scrollbarThumbVertical="@drawable/scroll_view_color"/>
+
+</RelativeLayout>

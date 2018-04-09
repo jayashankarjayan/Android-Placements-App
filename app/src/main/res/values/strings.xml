@@ -1,0 +1,66 @@
+<resources>
+    <string name="app_name">Placements</string>
+
+    <string name="apply_button_text">Apply</string>
+    <string name="unapply_button_text">Unapply</string>
+    <string name="not_applicable_button_text">Not Applicable</string>
+    <string name="closed_button_text">Closed</string>
+    <string name="image_of_the_user">Image of the user</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+
+    <!-- Forgot password -->
+    <string name="forgot_password">Forgot Password</string>
+    <!-- No App Found Text -->
+    <string name="no_app_found">No app found</string>
+
+    <!-- App needs to be restarted-->
+    <string name="please_try_again_after_some_time">Please try again after some time</string>
+
+    <!-- Incorrect username or password -->
+    <string name="incorrect_username_or_password">Incorrect username or password</string>
+
+    <!-- Main Fragment Strings -->
+    <string name="title_new_notices">New Notices</string>
+    <string name="no_new_notices">No new notices</string>
+
+    <!-- String related to Viewing user profile -->
+    <string name="title_strengths">Strengths</string>
+    <string name="title_weaknesses">Weaknesses</string>
+    <string name="title_personal_skills">Personal Skills</string>
+    <string name="title_technical_skills">Technical Skills</string>
+    <string name="title_academics">Academics</string>
+    <string name="no_achievements_to_display">Nothing to display. Add your achievements</string>
+    <string name="no_strengths_to_display">Nothing to display. Add your strengths</string>
+    <string name="no_weaknesses_to_display">Nothing to display. Add your weaknesses</string>
+    <string name="no_personal_skills_to_display">Nothing to display. Add your personal skills</string>
+    <string name="no_technical_skills_to_display">Nothing to display. Add your technical skills</string>
+
+
+    <!-- Strings related to Editing user profile -->
+    <string name="edit_name">Name</string>
+    <string name="edit_emsil">Email</string>
+    <string name="edit_contact">Contact</string>
+    <string name="edit_gender">Gender</string>
+    <string name="edit_gender_male">Male</string>
+    <string name="edit_gender_female">Female</string>
+    <string name="edit_college">College</string>
+    <string name="edit_achievements">Achievements</string>
+    <string name="edit_strengths">Strengths</string>
+    <string name="edit_weaknesses">Weaknesses</string>
+    <string name="edit_personal_skills">Personal Skills</string>
+    <string name="edit_technical_skills">Technical Skills</string>
+    <string name="edit_button_save">Save</string>
+    <string name="edit_button_change_password">Change Password</string>
+
+    <string name="title_activity_edit_personal_details">Edit Profile</string>
+    <string name="tab_general">General</string>
+    <string name="tab_personal_skills">Personal Skills</string>
+    <string name="tab_technical_skills">Technical Skills</string>
+    <string name="title_activity_admin_home">Placements</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+
+</resources>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/admin_home_display_students"
+            android:icon="@drawable/no_user_image"
+            android:title="Students"/>
+
+        <item
+            android:id="@+id/admin_home_display_moderators"
+            android:icon="@drawable/moderators"
+            android:title="Moderators" />
+        <item
+            android:id="@+id/admin_home_display_companies"
+            android:icon="@drawable/applied_to_company"
+            android:title="Companies"/>
+        <item
+            android:id="@+id/admin_home_logout"
+            android:icon="@drawable/logout"
+            android:title="Logout"/>
+    </group>
+
+</menu>

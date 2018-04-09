@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/notice_home_row_relative_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/container_gap"
+    android:layout_marginStart="@dimen/activity_inner_space"
+    android:layout_marginEnd="@dimen/activity_inner_space"
+    android:layout_marginBottom="@dimen/activity_inner_space">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_inner_space"
+            android:layout_marginBottom="@dimen/activity_inner_space"
+            android:layout_marginStart="@dimen/activity_inner_space"
+            android:layout_marginEnd="@dimen/activity_inner_space"
+            tools:text="Notice Title"
+            android:textSize="18sp"
+            android:id="@+id/home_notices_text_view_notice_title"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            tools:text="Date of notice"
+            android:textStyle="italic"
+            android:paddingBottom="@dimen/activity_inner_space"
+            android:paddingLeft="@dimen/activity_inner_space"
+            android:paddingStart="@dimen/activity_inner_space"
+            android:paddingRight="@dimen/activity_inner_space"
+            android:paddingEnd="@dimen/activity_inner_space"
+            android:id="@+id/activity_notices_text_view_date_of_issue"
+            android:layout_below="@id/home_notices_text_view_notice_title"/>
+
+</RelativeLayout>

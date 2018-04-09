@@ -1,0 +1,4 @@
+#Sun Apr 08 19:14:07 IST 2018
+base.0=C\:\\Users\\Jayashankar Jayan\\Documents\\GitHub\\Android-Pacements-App\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\6
+path.0=classes.dex
+renamed.0=classes.dex

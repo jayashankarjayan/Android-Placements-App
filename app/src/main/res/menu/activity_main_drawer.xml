@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <group android:checkableBehavior="single">
+        <item
+            tools:title="Home"
+            android:title=""
+            android:id="@+id/menu_home"/>
+    </group>
+
+    <item android:title="Action">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item tools:title="Apply"
+                    android:title=""
+                    android:id="@+id/menu_apply"/>
+                <item tools:title="Applied Companies"
+                    android:title=""
+                    android:id="@+id/menu_applied_companies"/>
+                <item tools:title="Notices"
+                    android:title=""
+                    android:id="@+id/menu_notices"/>
+                <item android:title="Company Invitations"
+                    android:id="@+id/menu_invitations"/>
+                <item tools:title="Chat"
+                    android:title=""
+                    android:id="@+id/menu_chat"/>
+            </group>
+        </menu>
+    </item>
+
+    <item android:title="Profile">
+            <menu>
+                <group android:checkableBehavior="single">
+                    <item
+                        android:id="@+id/menu_user_login"
+                        tools:title="Login"
+                        android:title=""/>
+                    <item
+                        android:id="@+id/menu_user_profile"
+                        android:title=""
+                        tools:title="My Profile"/>
+                    <item
+                        android:id="@+id/menu_edit_user_profile"
+                        android:title=""
+                        tools:title="Edit Profile"/>
+                </group>
+                <item
+                    android:id="@+id/menu_share"
+                    tools:title="Share"
+                    android:title=""/>
+                <item
+                    android:id="@+id/menu_user_logout"
+                    tools:title="Logout"
+                    android:title=""/>
+        </menu>
+    </item>
+</menu>
